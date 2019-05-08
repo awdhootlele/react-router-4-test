@@ -71,14 +71,13 @@
   },
   "dependencies": {
     "babel-plugin-transform-react-remove-prop-types": "^0.2.11",
-    "preact": "beta",
+    "preact": "^8.4.2",
     "preact-compat": "^3.0.0",
     "preact-render-to-string": "^3.5.0",
     "preact-router": "^2.0.0",
     "promise-polyfill": "^6.0.2",
     "proptypes": "^0.14.3",
-    "react-router": "4.0.0-beta.7",
-    "react-router-dom": "4.0.0-beta.7",
+    "react-router-dom": "4.4.0-beta.6",
     "serve": "^2.0.0"
   }
 }

@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
-import Router from 'react-router-dom/BrowserRouter';
-import Route from 'react-router/Route';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './header';
 import Home from './home';
 import Profile from './profile';
@@ -8,14 +7,23 @@ import Profile from './profile';
 export default class App extends Component {
 	render() {
 		return (
-			<Router>
+			<BrowserRouter>
 				<div id="app">
 					<Header />
-					<Route component={Home} exact path="/" />
-					<Route component={Profile} exact path="/profile/" user="me" />
-					<Route component={Profile} exact path="/profile/:user" />
+					<AppRoutes></AppRoutes>
 				</div>
-			</Router>
+			</BrowserRouter>
 		);
 	}
 }
+
+
+const AppRoutes = () => {
+	return (
+		<div>
+			<Route component={Home} exact path="/" />
+			<Route component={Profile} exact path="/profile/" user="me" />
+			<Route component={Profile} exact path="/profile/:user" />
+		</div>
+	);
+};
